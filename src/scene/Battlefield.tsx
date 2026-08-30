@@ -1,9 +1,10 @@
+import { ACESFilmicToneMapping } from 'three'
 import { Canvas } from '@react-three/fiber'
 import { ContactShadows } from '@react-three/drei'
 import { useField } from '../state/FieldContext'
 import { BreathingCamera } from './BreathingCamera'
 import { Dust } from './Dust'
-import { FrontScar } from './FrontScar'
+import { FrontScar, MidfieldHash } from './FrontScar'
 import { Ground } from './Ground'
 import { Landmarks } from './Landmarks'
 import { Lighting } from './Lighting'
@@ -19,15 +20,24 @@ export function Battlefield() {
       shadows
       dpr={[1, 1.75]}
       camera={{ position: [2, 11.2, 23.8], fov: 34, near: 0.1, far: 140 }}
-      gl={{ antialias: true, powerPreference: 'high-performance' }}
+      gl={{
+        antialias: true,
+        powerPreference: 'high-performance',
+        toneMapping: ACESFilmicToneMapping,
+        toneMappingExposure: 1.28,
+      }}
+      onCreated={() => {
+        document.documentElement.classList.add('field-ready')
+      }}
       onPointerMissed={() => select(null)}
     >
-      <color attach="background" args={['#120e0b']} />
-      <fog attach="fog" args={['#1a120e', 28, 78]} />
+      <color attach="background" args={['#2a1a12']} />
+      <fog attach="fog" args={['#3a2418', 36, 92]} />
       <BreathingCamera />
       <SkyDome />
       <Lighting />
       <Ground />
+      <MidfieldHash />
       <FrontScar />
       <Landmarks />
       {spots.map((spot) => (

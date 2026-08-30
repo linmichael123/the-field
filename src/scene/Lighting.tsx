@@ -1,12 +1,12 @@
 export function Lighting() {
   return (
     <>
-      <hemisphereLight args={['#f0c090', '#2a1c12', 0.55]} />
-      <ambientLight intensity={0.18} color="#c9a078" />
+      <hemisphereLight args={['#f0c090', '#4a3824', 0.85]} />
+      <ambientLight intensity={0.38} color="#d4b08a" />
       <directionalLight
         castShadow
         position={[-22, 18, 10]}
-        intensity={2.35}
+        intensity={2.8}
         color="#ffb56a"
         shadow-mapSize={[2048, 2048]}
         shadow-camera-near={2}

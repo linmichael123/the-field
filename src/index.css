@@ -66,7 +66,46 @@ body,
 }
 
 .vignette {
-  background: radial-gradient(ellipse at 50% 45%, transparent 35%, rgba(6, 4, 3, 0.55) 100%);
+  background: radial-gradient(ellipse at 50% 45%, transparent 42%, rgba(6, 4, 3, 0.42) 100%);
+}
+
+.boot {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  font-family: var(--serif);
+  font-size: 28px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--paper);
+  pointer-events: none !important;
+  transition: opacity 0.4s ease;
+}
+
+html.field-ready .boot {
+  opacity: 0;
+}
+
+.hill-turns {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 64px);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--paper);
+  text-shadow: 0 0 28px rgba(243, 234, 216, 0.55);
+  pointer-events: none !important;
+  animation: turnflash 1.4s ease-out both;
+}
+
+@keyframes turnflash {
+  0% { opacity: 0; letter-spacing: 0.28em; }
+  20% { opacity: 1; }
+  100% { opacity: 0; letter-spacing: 0.14em; }
 }
 
 .grain {

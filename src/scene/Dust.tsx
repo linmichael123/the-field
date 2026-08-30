@@ -38,10 +38,11 @@ export function Dust() {
   const ambientMat = useMemo(
     () =>
       new PointsMaterial({
-        color: new Color('#c9b08a'),
-        size: 0.085,
+        color: new Color('#ead8b4'),
+        size: 0.14,
         transparent: true,
-        opacity: 0.28,
+        opacity: 0.42,
+        toneMapped: false,
         depthWrite: false,
       }),
     [],
@@ -49,10 +50,11 @@ export function Dust() {
   const trenchMat = useMemo(
     () =>
       new PointsMaterial({
-        color: new Color('#e8d2a8'),
-        size: 0.11,
+        color: new Color('#ffe7c2'),
+        size: 0.18,
         transparent: true,
-        opacity: 0.45,
+        opacity: 0.62,
+        toneMapped: false,
         depthWrite: false,
       }),
     [],
@@ -60,10 +62,11 @@ export function Dust() {
   const burstMat = useMemo(
     () =>
       new PointsMaterial({
-        color: new Color('#f3ead8'),
-        size: 0.16,
+        color: new Color('#fff6e4'),
+        size: 0.22,
         transparent: true,
         opacity: 0,
+        toneMapped: false,
         depthWrite: false,
       }),
     [],

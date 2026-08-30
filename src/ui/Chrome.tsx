@@ -7,7 +7,7 @@ import { Ticker } from './Ticker'
 
 export function Chrome() {
   const { beatAt } = useField()
-  const beating = performance.now() - beatAt < 1600
+  const beating = beatAt > 0 && performance.now() - beatAt < 1600
 
   return (
     <div className={`chrome ${beating ? 'chrome-beat' : ''}`}>
@@ -24,6 +24,8 @@ export function Chrome() {
       <SpotList />
       <Ticker />
       <Overlay />
+      {beating && <p className="hill-turns">The hill turns</p>}
+      <p className="boot">The line is forming</p>
 
       <div className="vignette" />
       <div className="grain" />

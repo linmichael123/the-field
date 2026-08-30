@@ -8,6 +8,7 @@ export function SkyDome() {
       new ShaderMaterial({
         side: BackSide,
         depthWrite: false,
+        toneMapped: false,
         uniforms: {
           uZenith: { value: new Color('#0c0a12') },
           uHorizon: { value: new Color('#c46a32') },

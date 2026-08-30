@@ -9,17 +9,18 @@ export function Ground() {
   const mat = useMemo(
     () =>
       new ShaderMaterial({
+        toneMapped: false,
         uniforms: {
           uFront: { value: 0 },
           uBeat: { value: 0 },
           uTime: { value: 0 },
-          uEarthA: { value: new Color('#2a2116') },
-          uEarthB: { value: new Color('#3d2f1d') },
-          uGrass: { value: new Color('#3a4a28') },
-          uScar: { value: new Color('#1a100c') },
-          uEmber: { value: new Color('#e07a3d') },
-          uSteel: { value: new Color('#7eb8c9') },
-          uMid: { value: new Color('#f3ead8') },
+          uEarthA: { value: new Color('#5a4630') },
+          uEarthB: { value: new Color('#7a5d38') },
+          uGrass: { value: new Color('#5c6b34') },
+          uScar: { value: new Color('#2a1810') },
+          uEmber: { value: new Color('#ff8a3d') },
+          uSteel: { value: new Color('#9ad4e0') },
+          uMid: { value: new Color('#f8edd8') },
         },
         vertexShader: `
           varying vec3 vWorld;
@@ -67,25 +68,24 @@ export function Ground() {
             earth = mix(earth, uGrass, smoothstep(0.55, 0.9, n) * 0.28 * (1.0 - furrows * 0.4));
 
             float distFront = abs(p.x - uFront);
-            float trench = smoothstep(2.15, 0.15, distFront);
-            float lip = smoothstep(3.4, 1.6, distFront) - trench;
-            earth = mix(earth, uScar, trench * 0.92);
-            earth *= 1.0 - trench * 0.35;
-            earth += vec3(0.08, 0.04, 0.02) * lip;
+            float trench = smoothstep(2.6, 0.12, distFront);
+            float lip = smoothstep(4.2, 1.8, distFront) - trench;
+            earth = mix(earth, uScar, trench * 0.88);
+            earth += vec3(0.18, 0.1, 0.04) * lip;
 
             float side = sign(p.x - uFront + 0.0001);
             vec3 glow = mix(uEmber, uSteel, side * 0.5 + 0.5);
-            earth += glow * trench * (0.18 + 0.35 * uBeat);
-            earth += uMid * uBeat * smoothstep(1.1, 0.0, distFront) * 0.85;
+            earth += glow * trench * (0.42 + 0.7 * uBeat);
+            earth += uMid * uBeat * smoothstep(1.4, 0.0, distFront);
 
-            float midline = smoothstep(0.28, 0.0, abs(p.x)) * 0.22 * (1.0 - trench);
-            earth += uMid * midline * (0.25 + uBeat);
+            float midline = smoothstep(0.38, 0.0, abs(p.x)) * (1.0 - trench);
+            earth += uMid * midline * (0.45 + uBeat);
 
             float dust = noise(p * 0.08 + vec2(uTime * 0.03, 0.0));
-            earth += vec3(0.07, 0.05, 0.03) * dust * 0.15;
+            earth += vec3(0.12, 0.09, 0.05) * dust * 0.22;
 
-            float fade = smoothstep(42.0, 18.0, length(p));
-            gl_FragColor = vec4(earth * fade, 1.0);
+            float fade = smoothstep(48.0, 16.0, length(p));
+            gl_FragColor = vec4(earth * mix(0.55, 1.0, fade), 1.0);
           }
         `,
       }),

@@ -103,7 +103,7 @@ export function Regiment({ spot }: { spot: Spot }) {
             roughness={0.55}
             metalness={0.05}
             emissive={glow}
-            emissiveIntensity={0.18 + size.scale * 0.12}
+            emissiveIntensity={0.32 + size.scale * 0.16}
           />
         </mesh>
       </group>
