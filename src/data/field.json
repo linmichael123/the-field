@@ -1,0 +1,219 @@
+{
+  "title": "THE FIELD",
+  "tagline": "Ten banners. Two lines. The hill is for sale.",
+  "spots": [
+    {
+      "id": "iron-left",
+      "side": "A",
+      "spotName": "Iron, left flank",
+      "rank": 0,
+      "formation": "pikes",
+      "brand": {
+        "id": "oxide",
+        "name": "OXIDE",
+        "tagline": "Rust never retreats.",
+        "mark": "bars",
+        "glyph": "OX",
+        "primary": "#c2410c",
+        "secondary": "#1c1917"
+      },
+      "bid": 820,
+      "history": [
+        { "who": "OXIDE", "amount": 820, "at": "2026-08-29T22:14:00Z" },
+        { "who": "kiln.studio", "amount": 640, "at": "2026-08-29T19:02:00Z" },
+        { "who": "unnamed", "amount": 400, "at": "2026-08-29T15:41:00Z" }
+      ]
+    },
+    {
+      "id": "iron-second",
+      "side": "A",
+      "spotName": "Iron, second rank",
+      "rank": 1,
+      "formation": "skirmish",
+      "brand": {
+        "id": "husk",
+        "name": "HUSK",
+        "tagline": "Grain, then fire.",
+        "mark": "wave",
+        "glyph": "HK",
+        "primary": "#d4a373",
+        "secondary": "#2a2118"
+      },
+      "bid": 360,
+      "history": [
+        { "who": "HUSK", "amount": 360, "at": "2026-08-29T21:08:00Z" },
+        { "who": "millwright", "amount": 240, "at": "2026-08-29T17:55:00Z" }
+      ]
+    },
+    {
+      "id": "iron-center",
+      "side": "A",
+      "spotName": "Iron, center",
+      "rank": 2,
+      "formation": "standards",
+      "brand": {
+        "id": "rivet",
+        "name": "RIVET",
+        "tagline": "Holds what the hill forgets.",
+        "mark": "hex",
+        "glyph": "RV",
+        "primary": "#e9c46a",
+        "secondary": "#1a1408"
+      },
+      "bid": 980,
+      "history": [
+        { "who": "RIVET", "amount": 980, "at": "2026-08-30T00:06:00Z" },
+        { "who": "brass&co", "amount": 810, "at": "2026-08-29T20:33:00Z" },
+        { "who": "anvil.local", "amount": 520, "at": "2026-08-29T14:18:00Z" }
+      ]
+    },
+    {
+      "id": "iron-reserve",
+      "side": "A",
+      "spotName": "Iron, reserve",
+      "rank": 3,
+      "formation": "shields",
+      "brand": {
+        "id": "kindling",
+        "name": "KINDLING",
+        "tagline": "Small heat. Late spark.",
+        "mark": "tri",
+        "glyph": "KD",
+        "primary": "#e85d04",
+        "secondary": "#1b0f08"
+      },
+      "bid": 190,
+      "history": [
+        { "who": "KINDLING", "amount": 190, "at": "2026-08-29T18:44:00Z" },
+        { "who": "unnamed", "amount": 120, "at": "2026-08-29T13:09:00Z" }
+      ]
+    },
+    {
+      "id": "iron-right",
+      "side": "A",
+      "spotName": "Iron, right flank",
+      "rank": 4,
+      "formation": "riders",
+      "brand": {
+        "id": "nitrate",
+        "name": "NITRATE",
+        "tagline": "The flash before the shove.",
+        "mark": "slash",
+        "glyph": "NT",
+        "primary": "#9b2226",
+        "secondary": "#140808"
+      },
+      "bid": 540,
+      "history": [
+        { "who": "NITRATE", "amount": 540, "at": "2026-08-29T23:21:00Z" },
+        { "who": "red.hour", "amount": 410, "at": "2026-08-29T16:12:00Z" }
+      ]
+    },
+    {
+      "id": "steel-left",
+      "side": "B",
+      "spotName": "Steel, left flank",
+      "rank": 0,
+      "formation": "riders",
+      "brand": {
+        "id": "brine",
+        "name": "BRINE",
+        "tagline": "Salt the ground. Keep it.",
+        "mark": "arc",
+        "glyph": "BR",
+        "primary": "#2a9d8f",
+        "secondary": "#071412"
+      },
+      "bid": 410,
+      "history": [
+        { "who": "BRINE", "amount": 410, "at": "2026-08-29T20:51:00Z" },
+        { "who": "harbor", "amount": 280, "at": "2026-08-29T15:03:00Z" }
+      ]
+    },
+    {
+      "id": "steel-second",
+      "side": "B",
+      "spotName": "Steel, second rank",
+      "rank": 1,
+      "formation": "skirmish",
+      "brand": {
+        "id": "velum",
+        "name": "VELUM",
+        "tagline": "Thin paper. Thick claim.",
+        "mark": "dot",
+        "glyph": "VL",
+        "primary": "#edf2f4",
+        "secondary": "#1b1e22"
+      },
+      "bid": 270,
+      "history": [
+        { "who": "VELUM", "amount": 270, "at": "2026-08-29T19:27:00Z" },
+        { "who": "folio", "amount": 180, "at": "2026-08-29T14:50:00Z" }
+      ]
+    },
+    {
+      "id": "steel-center",
+      "side": "B",
+      "spotName": "Steel, center",
+      "rank": 2,
+      "formation": "standards",
+      "brand": {
+        "id": "foghorn",
+        "name": "FOGHORN",
+        "tagline": "Heard before it is seen.",
+        "mark": "ring",
+        "glyph": "FH",
+        "primary": "#8d99ae",
+        "secondary": "#101318"
+      },
+      "bid": 760,
+      "history": [
+        { "who": "FOGHORN", "amount": 760, "at": "2026-08-29T23:58:00Z" },
+        { "who": "low.tide", "amount": 600, "at": "2026-08-29T18:16:00Z" },
+        { "who": "unnamed", "amount": 440, "at": "2026-08-29T12:40:00Z" }
+      ]
+    },
+    {
+      "id": "steel-reserve",
+      "side": "B",
+      "spotName": "Steel, reserve",
+      "rank": 3,
+      "formation": "shields",
+      "brand": {
+        "id": "quill",
+        "name": "QUILL",
+        "tagline": "Write the line. Move it.",
+        "mark": "cross",
+        "glyph": "QL",
+        "primary": "#4cc9f0",
+        "secondary": "#061018"
+      },
+      "bid": 620,
+      "history": [
+        { "who": "QUILL", "amount": 620, "at": "2026-08-30T00:22:00Z" },
+        { "who": "nibs", "amount": 490, "at": "2026-08-29T17:07:00Z" }
+      ]
+    },
+    {
+      "id": "steel-right",
+      "side": "B",
+      "spotName": "Steel, right flank",
+      "rank": 4,
+      "formation": "pikes",
+      "brand": {
+        "id": "tinker",
+        "name": "TINKER",
+        "tagline": "Fix the shove. Charge later.",
+        "mark": "grid",
+        "glyph": "TK",
+        "primary": "#7209b7",
+        "secondary": "#0d0814"
+      },
+      "bid": 330,
+      "history": [
+        { "who": "TINKER", "amount": 330, "at": "2026-08-29T21:46:00Z" },
+        { "who": "workshop", "amount": 210, "at": "2026-08-29T16:28:00Z" }
+      ]
+    }
+  ]
+}
